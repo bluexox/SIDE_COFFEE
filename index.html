@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <meta property="og:type" content="website">
+    <meta property="og:title" content="사이드커피">
+    <meta name="keywords" content="카페업 활성화를 위한 착한 브랜드" />
+    <meta name="description" content="카페업 활성화를 위한 착한 브랜드" />
+    <meta property="og:description" content="카페업 활성화를 위한 착한 브랜드">
+
+    <meta name="fb:card" content="summary">
+    <meta name="fb:title" content="사이드커피">
+    <meta name="fb:description" content="카페업 활성화를 위한 착한 브랜드">
+    <meta name="fb:domain" content="사이드커피">
+
+    <meta name="twitter:card" content="summary">
+    <meta name="twitter:title" content="사이드커피">
+    <meta name="twitter:description" content="카페업 활성화를 위한 착한 브랜드">
+    <meta name="twitter:domain" content="사이드커피">
+
+    <title>사이드커피</title>
+
+    <!-- favicon -->
+    <link rel="icon" href="img/favicon.ico" type="image/x-icon">
+
+    <!-- font -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/fonts-archive/Paperlogy/Paperlogy.css" type="text/css" />
+    <link
+        href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap"
+        rel="stylesheet">
+
+    <!-- css -->
+    <link rel="stylesheet" href="css/reset.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" />
+    <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />
+    <link rel="stylesheet" href="css/main.css">
+
+    <!-- script -->
+    <script src="js/jquery-3.3.1.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+
+</head>
+
+<body>
+    <div id="wrap">
+        <header id="header">
+            <div class="header-inner">
+                <h1>
+                    <a href="/">
+                        <img src="img/side-logo.svg" alt="사이드커피" width="280" height="50" fetchpriority="high"
+                            decoding="async">
+                    </a>
+                </h1>
+                <nav>
+                    <ul id="gnb">
+                        <li><a href="#">성공경쟁력</a></li>
+                        <li><a href="#">창업혜택</a></li>
+                        <li><a href="#">인테리어</a></li>
+                        <li><a href="#">메뉴소개</a></li>
+                        <li><a href="#">창업비용</a></li>
+                    </ul>
+                </nav>
+            </div>
+        </header>
+
+        <div id="contact">
+            <div class="call">
+                <img src="img/side-logo.svg" alt="">
+                <img src="img/call.png" alt="1544-4727">
+            </div>
+            <form action="https://formsubmit.co/ceo@woodscoffeecompany.com" method="POST" class="contact-form">
+                <div class="inputs">
+                    <input type="text" name="name" placeholder="성함" required>
+                    <input type="tel" name="phone" placeholder="연락처" required>
+                    <input type="text" name="location" placeholder="희망지역" required>
+                </div>
+                <div class="submit">
+                    <label class="agree">
+                        <input type="checkbox" name="agree" checked required> 개인정보수집동의
+                    </label>
+                    <button type="submit" class="submit-btn">
+                        창업문의하기
+                    </button>
+                </div>
+                <input type="hidden" name="_captcha" value="false">
+                <input type="hidden" name="_subject" value="사이드커피 홈페이지에서 문의가 도착했습니다!">
+            </form>
+            <button type="button" id="goTop" class="go-top-btn">
+                <img src="img/btn-goTop.png" alt="맨위로">
+            </button>
+        </div>
+
+        <section id="main">
+            <picture class="main-top">
+                <source srcset="img/mob-mainTxt.png" media="(max-width: 500px)">
+                <source srcset="img/tab-mainTxt.png" media="(max-width: 900px)">
+                <img src="img/main-txtTop.png" alt="Always by your side">
+            </picture>
+            <div class="main-middle">
+                <picture>
+                    <source srcset="img/main-deco-mo.png" media="(max-width: 480px)">
+                    <img src="img/main-deco1.png" alt="">
+                </picture>
+                <div class="middle-txt">
+                    <h3>점주님 자율성 보장<br>
+                        카페업 활성화를 위한 착한 브랜드<br>
+                        <b>SIDE COFFEE</b>
+                    </h3>
+                </div>
+            </div>
+            <div class="main-visual">
+                <img src="img/main-rotate.png" alt="">
+                <img src="img/main-coffee.png" alt="">
+            </div>
+            <div class="main-btm">
+                <span>GOOD<br>BRAND</span>
+                <img src="img/main-deco1.png" alt="">
+            </div>
+        </section>
+    </div>
+</body>
+
+</html>
