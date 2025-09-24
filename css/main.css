@@ -626,7 +626,7 @@ form {
    width: 100%;
    height: auto;
    background: url(../img/benefit-bg.png) no-repeat center / cover;
-   padding: clamp(50px, 2vw, 100px) 12px;
+   padding: clamp(50px, 2vw, 100px) 4%;
    text-align: center;
 }
 
@@ -648,8 +648,13 @@ form {
    margin-bottom: 30px;
 }
 
+.bene-wrap {
+   width: 100%;
+   padding: 0;
+}
+
 .bene-list {
-   max-width: var(--gird-max);
+   max-width: var(--grid-max);
    margin: 0 auto;
    display: grid;
    grid-template-columns: repeat(3, minmax(0, 1fr));
@@ -810,7 +815,7 @@ form {
    height: auto;
 }
 
-@media (max-width: 480px) {
+@media (max-width: 600px) {
    .section-mark {
       height: 50px;
    }
