@@ -967,6 +967,36 @@
             window.scrollTo({ top: 0, behavior: 'smooth' });
         });
 
+        $(function () {
+            const $header = $('#header');
+            let prev = 0;
+            const DELTA = 5;  // 민감도(너무 잦은 토글 방지)
+
+            $(window).on('scroll', function () {
+                const now = $(this).scrollTop();
+
+                // 상단 근처는 무조건 노출
+                if (now <= 10) {
+                    $header.removeClass('active').removeClass('scrolled');
+                    prev = now;
+                    return;
+                }
+
+                $header.addClass('scrolled'); // 그림자 효과 켜기(선택)
+
+                if (now > prev + DELTA) {
+                    // 아래로 스크롤 → 헤더 숨김
+                    $header.addClass('active');
+                } else if (now < prev - DELTA) {
+                    // 위로 스크롤 → 헤더 보임
+                    $header.removeClass('active');
+                }
+                prev = now;
+            });
+            if (window.innerWidth < 768) { $header.removeClass('active'); return; }
+        });
+
+
         (() => {
             const form = document.querySelector('.contact-form');
             if (!form) return;

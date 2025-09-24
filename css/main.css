@@ -51,7 +51,7 @@ body {
 
 #header {
    position: fixed;
-   top: -1px;
+   top: 0;
    left: 50%;
    transform: translateX(-50%);
    z-index: 1000;
@@ -59,6 +59,12 @@ body {
    padding: 0 var(--pad-x);
    background: #fff;
    padding-top: max(env(safe-area-inset-top), 0px);
+   transition: transform .25s ease, box-shadow .25s ease;
+   will-change: transform;
+}
+
+#header.active {
+   transform: translate(-50%, -110%);
 }
 
 .header-inner {
@@ -68,7 +74,9 @@ body {
    display: flex;
    justify-content: space-between;
    align-items: center;
-   border: 1px solid var(--main-blue);
+   border-left: 1px solid var(--main-blue);
+   border-right: 1px solid var(--main-blue);
+   border-bottom: 1px solid var(--main-blue);
 }
 
 .header-inner h1 a img {
