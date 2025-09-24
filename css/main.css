@@ -916,7 +916,6 @@ form {
 }
 
 @media (max-width: 500px) {
-
    .menu-marqueeY,
    .menu-marqueeY-R {
       display: none;
@@ -991,7 +990,7 @@ form {
    min-width: 0;
    width: 100%;
    font-family: var(--main-font);
-   font-size: clamp(11px, 1.2vw, 30px);
+   font-size: clamp(11px, 1.2vw, 20px);
    text-transform: uppercase;
    flex: 1;
    padding: 15px 20px;
