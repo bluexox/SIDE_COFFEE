@@ -449,7 +449,7 @@ form {
 
 #why {
    width: 100%;
-   padding: clamp(50px, 2vw, 100px) 12px;
+   padding: clamp(50px, 5vw, 100px) 12px;
 }
 
 .why-top img {
@@ -806,7 +806,7 @@ form {
 #interior {
    background: url(../img/interior-bg.png) no-repeat center/cover;
    width: 100%;
-   padding: clamp(50px, 2vw, 100px) 12px;
+   padding: clamp(50px, 5vw, 100px) 12px;
    text-align: center;
 }
 
@@ -915,7 +915,7 @@ form {
    height: auto;
    text-align: center;
    position: relative;
-   padding: clamp(50px, 2vw, 100px) 12px;
+   padding: clamp(50px, 5vw, 100px) 12px;
    overflow: hidden;
 }
 
