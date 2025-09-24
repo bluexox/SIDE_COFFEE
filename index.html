@@ -973,13 +973,10 @@
             window.scrollTo({ top: 0, behavior: 'smooth' });
         });
 
-
-        // 1) 새로 고침/재방문 시 스크롤 복원 금지
         if ('scrollRestoration' in history) {
             history.scrollRestoration = 'manual';
         }
 
-        // 2) 최초 진입에 URL 해시(#section)가 있으면 제거 + 맨 위로
         window.addEventListener('load', () => {
             if (location.hash) {
                 history.replaceState(null, document.title, location.pathname + location.search);
@@ -989,7 +986,6 @@
             }
         });
 
-        // 3) 내부 앵커 클릭 시 URL에 # 붙이지 않고 부드럽게 스크롤 (다음 방문 점프 방지)
         document.addEventListener('click', (e) => {
             const a = e.target.closest('a[href^="#"]');
             if (!a) return;

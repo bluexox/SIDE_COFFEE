@@ -550,11 +550,13 @@ form {
    display: flex;
    justify-content: space-between;
    align-items: flex-start;
+   align-items: center;
 }
 
 .why-num {
    line-height: 1;
 }
+
 
 .why-tit span {
    font-family: var(--sub-font);
