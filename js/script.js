@@ -19,11 +19,5 @@ $(document).ready(function () {
             }
         });
     });
-    
-    document.getElementById("goTop").addEventListener("click", function () {
-        window.scrollTo({ top: 0, behavior: 'smooth' });
-    });
-
-    
 
 });
