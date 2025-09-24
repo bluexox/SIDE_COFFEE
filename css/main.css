@@ -858,7 +858,7 @@ form {
 
 .interior-txt {
    display: inline-block;
-   padding: 18px;
+   padding: 18px 24px;
    font-size: clamp(14px, 2vw, 24px);
    word-break: keep-all;
    background: #fff;
@@ -1071,7 +1071,7 @@ form {
 }
 
 .product-name {
-   font-size: clamp(14px, 2vw, 18px);
+   font-size: clamp(14px, 2vw, 20px);
    color: #111;
 }
 
