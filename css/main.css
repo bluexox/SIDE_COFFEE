@@ -450,7 +450,7 @@ form {
 
 #why {
    width: 100%;
-   padding: clamp(50px, 5vw, 100px) 12px;
+   padding: clamp(50px, 10vw, 100px) 12px;
 }
 
 .why-top img {
