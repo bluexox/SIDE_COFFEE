@@ -51,9 +51,9 @@
 <body>
     <div id="wrap">
         <header id="header">
-            <div class="header-inner">
+            <div class="header-inner" data-aos="fade-down" data-aos-duration="1400">
                 <h1>
-                    <a href="/">
+                    <a href="index.html">
                         <img src="img/side-logo.svg" alt="사이드커피" width="280" height="50" fetchpriority="high"
                             decoding="async">
                     </a>
@@ -972,6 +972,36 @@
         document.getElementById("goTop").addEventListener("click", function () {
             window.scrollTo({ top: 0, behavior: 'smooth' });
         });
+
+
+        // 1) 새로 고침/재방문 시 스크롤 복원 금지
+        if ('scrollRestoration' in history) {
+            history.scrollRestoration = 'manual';
+        }
+
+        // 2) 최초 진입에 URL 해시(#section)가 있으면 제거 + 맨 위로
+        window.addEventListener('load', () => {
+            if (location.hash) {
+                history.replaceState(null, document.title, location.pathname + location.search);
+                window.scrollTo(0, 0);
+                // AOS 쓰면 강제 위치 이후 다시 계산
+                if (window.AOS?.refreshHard) setTimeout(() => AOS.refreshHard(), 50);
+            }
+        });
+
+        // 3) 내부 앵커 클릭 시 URL에 # 붙이지 않고 부드럽게 스크롤 (다음 방문 점프 방지)
+        document.addEventListener('click', (e) => {
+            const a = e.target.closest('a[href^="#"]');
+            if (!a) return;
+            const id = a.getAttribute('href').slice(1);
+            const el = document.getElementById(id);
+            if (!el) return;
+            e.preventDefault();
+            el.scrollIntoView({ behavior: 'smooth', block: 'start' });
+
+        });
+
+
 
         $(function () {
             const $header = $('#header');
