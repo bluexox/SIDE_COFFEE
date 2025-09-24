@@ -350,14 +350,25 @@ form {
 }
 
 @media (max-width: 825px) {
+   #main {
+      height: 90vh;
+   }
+   
    .main-middle picture {
       margin-left: auto;
       display: block;
       margin-bottom: 100px;
+      margin-left: 60%;
    }
 
    .main-middle .middle-txt {
       display: none;
+   }
+
+   .main-visual [data-aos] {
+      opacity: 1 !important;
+      transform: none !important;
+      transition: none !important;
    }
 
    .main-btm {
@@ -365,19 +376,14 @@ form {
    }
 }
 
-/* 마퀴 컨테이너 */
 .marquee {
    --gap: 0;
    --duration: 25s;
    /* 속도(작을수록 빠름). 필요시 숫자만 바꾸면 됨 */
    overflow: hidden;
    position: relative;
-   /* 가장자리 페이드가 거슬리면 두 줄 지워도 됨 */
-   /* -webkit-mask-image: linear-gradient(to right, transparent 0, #000 8%, #000 92%, transparent 100%);
-   mask-image: linear-gradient(to right, transparent 0, #000 8%, #000 92%, transparent 100%); */
 }
 
-/* 움직이는 트랙: 그룹 2세트를 감싸고 -50%만큼 이동 */
 .marquee__track {
    display: flex;
    gap: 0;
@@ -398,24 +404,19 @@ form {
    animation-direction: reverse;
 }
 
-/* 실제 아이템 묶음(한 세트) — 여기서만 간격 */
 .marquee__group {
    display: flex;
    gap: var(--gap);
 }
 
-/* 이미지: PC 64px, 모바일 자동 축소 */
 .marquee img {
    height: clamp(32px, 6vw, 64px);
-   /* ← PC 기준 64px */
    width: auto;
    display: block;
    object-fit: contain;
    flex: 0 0 auto;
-   /* 눌림 방지 */
 }
 
-/* (선택) 모션 최소화 환경 배려 */
 @media (prefers-reduced-motion: reduce) {
    .marquee__track {
       animation: none !important;
@@ -432,7 +433,7 @@ form {
 
 #why {
    width: 100%;
-   padding: 100px 12px;
+   padding: clamp(50px, 2vw, 100px) 12px;
 }
 
 .why-top img {
@@ -609,7 +610,7 @@ form {
    width: 100%;
    height: auto;
    background: url(../img/benefit-bg.png) no-repeat center / cover;
-   padding: 100px 4%;
+   padding: clamp(50px, 2vw, 100px) 12px;
    text-align: center;
 }
 
@@ -916,6 +917,7 @@ form {
 }
 
 @media (max-width: 500px) {
+
    .menu-marqueeY,
    .menu-marqueeY-R {
       display: none;
@@ -1079,6 +1081,10 @@ form {
    font-size: clamp(11px, 2vw, 14px);
    color: #888;
    margin-bottom: 12px;
+}
+
+#blended .product-name-en {
+   margin-bottom: 0;
 }
 
 #always {
