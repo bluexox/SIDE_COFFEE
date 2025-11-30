@@ -663,7 +663,7 @@ form {
 
 .bene-tit span b {
    font-weight: 600;
-   color: #FFFF00;
+   color: #FFFF00 !important;
 }
 
 .bene-tit p {
